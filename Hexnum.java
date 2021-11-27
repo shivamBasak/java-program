@@ -30,6 +30,6 @@ while(n>0) {
      str=hex[rem]+str;
       n=n/16;
      }
- System.out.println("hexadecimal: "+str); 
+ System.out.println("hexan: "+str); 
 } 
 }

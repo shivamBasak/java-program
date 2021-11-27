@@ -1,7 +1,7 @@
 
 import java.io.*;
 
-abstract class Shape{
+ abstract class Shape{
  abstract public void surfaceArea();
  abstract public void volume();
  final float pi=3.14f;
@@ -11,7 +11,7 @@ class Sphere extends Shape{
  double r;
  private double area;
  private double volume;
- public void accept() throws IOException{
+ public void SHOWDATA() throws IOException{
   System.out.println("Enter the radius of the Sphere: ");
   BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
   r=Double.parseDouble(br.readLine());
@@ -34,7 +34,7 @@ class Sphere extends Shape{
 class Cone extends Shape{
  double h,r,area,volume;
 
- public void accept() throws IOException{
+ public void SHOWDATA() throws IOException{
   System.out.println("Enter radius and height of the Cone: ");
   BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
   r=Double.parseDouble(br.readLine());
@@ -59,7 +59,7 @@ class Cone extends Shape{
 
 class Cylinder extends Shape{
  double r,h,area,volume;
- public void accept() throws IOException{
+ public void SHOWDATA() throws IOException{
   System.out.println("Enter radius and height of the Cylinder: ");
   BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
   r=Double.parseDouble(br.readLine());
@@ -81,7 +81,7 @@ class Cylinder extends Shape{
 
 class Box extends Shape{
  double l,b,h,area,volume;
- public void accept() throws IOException{
+ public void SHOWDATA() throws IOException{
   System.out.println("Enter length, breadth and height of the Box: ");
   BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
   l=Double.parseDouble(br.readLine());
@@ -105,16 +105,16 @@ class Box extends Shape{
 public class threeDObject {
  public static void main(String [] args)throws IOException{
   Sphere s=new Sphere();
-  s.accept();
+  s.SHOWDATA();
   s.display();
   Cone co=new Cone();
-  co.accept();
+  co.SHOWDATA();
   co.display();
   Cylinder cy=new Cylinder();
-  cy.accept();
+  cy.SHOWDATA();
   cy.display();
   Box b=new Box();
-  b.accept();
+  b.SHOWDATA();
   b.display(); 
  }
 }
